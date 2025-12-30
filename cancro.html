@@ -1,1 +1,57 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Zoditag – Cancro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            width: calc(100% - 24px);
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #horoscope {
+            margin-top: 20px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Benvenuto su Zoditag</h2>
+<p>Prenditi un momento solo per te.</p>
+
+<input id="name" placeholder="Scrivi il tuo nome">
+<button onclick="showHoroscope()">Mostra Oroscopo</button>
+
+<p id="horoscope"></p>
+
+<script>
+function showHoroscope() {
+    var name = document.getElementById('name').value || "Amico";
+    var text = name + ", oggi sei più ricettivo e consapevole di ciò che ti circonda. Le emozioni non chiedono di essere spiegate, ma comprese. Concediti il tempo di osservare senza reagire subito.<br><br>" +
+    "💖 Amore: La vicinanza cresce quando smetti di difenderti. Un gesto semplice può dire molto più di tante parole.<br>" +
+    "💼 Lavoro: Non è il giorno delle forzature. Una scelta ponderata, anche se lenta, ti porterà più lontano di una decisione impulsiva.<br>" +
+    "🍀 Energia del giorno: Equilibrio<br>" +
+    "🌟 Frase Zoditag: 'La vera forza nasce quando smetti di opporre resistenza a ciò che sei.'";
+    
+    document.getElementById('horoscope').innerHTML = text;
+}
+</script>
+
+</body>
+</html>
 
